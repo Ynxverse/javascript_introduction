@@ -20,23 +20,38 @@
 // Skriv ut begge på samme linje.
 // Forventet: Ola Nordmann  (men ditt navn)
 
+let firstname = "Ola";
+let lastname = "Nordmann";
+console.log(firstname, lastname);
+
 
 // Oppgave 2 (grunnleggende)
 // Lag let hp = 100. Spilleren blir truffet av en isbjørn og mister 30 hp.
 // Endre hp (uten let foran) og skriv den ut.
 // Forventet: 70
 
+let hp = 100;
+hp = hp - 30;
+console.log(hp);
 
 // Oppgave 3 (grunnleggende)
 // Lag const PI = 3.14159. Prøv deretter å skrive PI = 3; og kjør fila.
 // Skriv i oppgavearket hva feilmeldingen betyr, og fjern linja igjen.
 // Forventet: TypeError: Assignment to constant variable.
 
+const PI = 3.14159;
+// PI = 3;
+// erroren er "TypeError: Assignment to constant variable." som betyr at jeg prøvde å bytte verdien til en variabel som ikke kan endres.
 
 // Oppgave 4 (middels)
 // Et spill på Steam koster 200 kr før moms. Lag const MOMS = 0.25 og let pris = 200.
 // Skriv ut prisen med moms.
 // Forventet: Pris med moms: 250 kr
+
+const moms = 0.25;
+let pris = 200;
+pris = pris + (pris * moms);
+console.log("Pris med moms:", pris, "kr");
 
 
 // Oppgave 5 (avansert)
@@ -44,6 +59,12 @@
 // maks antall spillere på serveren (16), antall liv igjen (3),
 // høyden på Fløya (671), temperaturen i Tromsø nå (-4).
 // Forventet: ingenting i konsollen
+
+const spillere = 16;
+let liv = 3;
+const høyde = 671;
+let temperatur = -4;
+// jeg valgte å bruke let på liv og temperatur fordi man kan miste liv og temperaturen kan variere. jeg valgte konst til spillere og høyde fordi disse verdiene er fast og er alltid det samme.
 
 
 // ---------------- TEKST OG TALL ----------------
@@ -57,11 +78,15 @@
 // Forventet: number
 //            string
 
+console.log(typeof hp);
+console.log(typeof firstname);
+
 
 // Oppgave 7 (grunnleggende)
 // Bruk backticks og ${} til å skrive ut en setning med firstname og hp.
 // Forventet: Ola har 70 hp
 
+console.log(`${firstname} har ${hp} hp`);
 
 // Oppgave 8 (middels)
 // Skriv ut 5 + 5, deretter "5" + 5, deretter Number("5") + 5.
@@ -70,6 +95,9 @@
 //            55
 //            10
 
+console.log(5 + 5);
+console.log("5" + 5);
+console.log(Number("5") + 5);
 
 // Oppgave 9 (middels)
 // 17 elever skal deles i lag på 4. Bruk / og % .
@@ -78,6 +106,8 @@
 // Forventet: 4 lag
 //            1 til overs
 
+console.log("Antall hele lag:", Math.floor(17 / 4));
+console.log("Antall til overs:", 17 % 4);
 
 // ---------------- VALG MED IF ----------------
 // if kjører koden bare når betingelsen er sann. else kjører ellers.
